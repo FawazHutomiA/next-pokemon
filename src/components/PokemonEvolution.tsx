@@ -18,14 +18,14 @@ export default function PokemonEvolution({ chain }: Props) {
   return (
     <div>
       <h2 className="text-xl font-semibold mt-6 mb-2">Evolution</h2>
-      <div className="flex items-center space-x-2 text-lg">
+      <div className="flex flex-wrap gap-2 text-lg">
         {evoChain.map((name, idx) => (
-          <div key={name} className="flex items-center">
+            <div key={name} className="flex items-center">
             <span className="capitalize">{name}</span>
             {idx < evoChain.length - 1 && <span className="mx-2">→</span>}
-          </div>
+            </div>
         ))}
-      </div>
+        </div>
     </div>
   );
 }
